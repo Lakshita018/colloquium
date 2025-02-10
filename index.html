@@ -198,6 +198,26 @@
             <i id="right" class="fa-solid fa-angle-right"></i>
         </div>
     </div>
+    <div id="sponsers">
+        <div class="container">
+            <h1 class="title">OUR SPONSORS</h1>
+            <div class="sponsors-grid">
+                <div class="sponsor">
+                    <img src="images/title.png" alt="Sponsor 1 Logo" class="sponsor-logo">
+                    <p class="description">Title Sponsor</p>
+                </div>
+                <div class="sponsor">
+                    <img src="images/ai.png" alt="Sponsor 2 Logo" class="sponsor-logo">
+                    <p class="description">AI Partner</p>
+                </div>
+                <div class="sponsor">
+                    <img src="images/mentor.jpeg" alt="Sponsor 3 Logo" class="sponsor-logo">
+                    <p class="description">Our mentoring Partner</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
 
 
     <div id="our-team">
@@ -404,26 +424,7 @@
         </div>
     </div>
 
-    <div id="sponsers">
-        <div class="container">
-            <h1 class="title">OUR SPONSORS</h1>
-            <div class="sponsors-grid">
-                <div class="sponsor">
-                    <img src="images/title.png" alt="Sponsor 1 Logo" class="sponsor-logo">
-                    <p class="description">Title Sponsor</p>
-                </div>
-                <div class="sponsor">
-                    <img src="images/ai.png" alt="Sponsor 2 Logo" class="sponsor-logo">
-                    <p class="description">AI Partner</p>
-                </div>
-                <div class="sponsor">
-                    <img src="images/mentor.jpeg" alt="Sponsor 3 Logo" class="sponsor-logo">
-                    <p class="description">Our mentoring Partner</p>
-                </div>
-                
-            </div>
-        </div>
-    </div>
+    
     
       
     
@@ -531,7 +532,7 @@
 
         const autoPlay = () => {
             if (window.innerWidth < 200 || !isAutoPlay) return;
-            timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500);
+            timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 5000);
         };
 
         autoPlay();
@@ -571,7 +572,7 @@
         function startAutoScroll() {
             autoScroll = setInterval(() => {
                 scrollCarousel('right');
-            }, 3000);
+            }, 5000);
         }
 
         teamCarousel.addEventListener('mouseenter', () => clearInterval(autoScroll));
