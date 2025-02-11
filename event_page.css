@@ -9,7 +9,7 @@
     background-repeat: no-repeat;
     height: 100%;
 }
-#overthrone{
+/* #overthrone{
     background-image: url("images/wp11778457-viking-desktop-hd-wallpapers.jpg");
 }
 #wit-wars{
@@ -19,16 +19,17 @@
     background-image: url("images/1072652.jpg");
 }
 #web-vida{
-    background-image: url("images/breaking\ bad.jpg");
-}
+    background-image: url("breakingbad.jpg");
+} */
 
 .container {
     height: auto;
-    width: 60%;
-    max-width: 600px;
+    width: 50%;
+    /* max-width: 600px; */
     display: flex;
-    padding: 0 0 0 5rem;
-    backdrop-filter: brightness(0.4);
+    padding: 0 0 0 30px;
+    /* backdrop-filter: brightness(0.4); */
+    background-color: rgba(0,0,0,0.5);
     justify-content: center;
     flex-direction: column;
     gap: 14px;
@@ -168,18 +169,37 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 540px) {
     .container {
-        padding: 0 0 0 2.5rem;
+        padding: 0 2rem 0 2rem;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0);
     }
+
+    .container h1{
+        text-align: center;
+    }
+    .container .date{
+        text-align: center;
+    }
+    .container img{
+        margin: auto;
+    }
+    .container .resume-button{
+        display: block;
+        margin: 0 auto;
+        width: 6rem;
+    }
+      
 
     .intro .register button {
         font-size: 0.9rem;
         padding: 0.4rem 0.8rem;
+        align-items: center;
     }
 }
 
-/* Rules Section */
+/* Rules Section
 .rules-section {
     margin: 10rem 0;
     width: 100%;
@@ -192,29 +212,30 @@
     min-height: 100vh;
     padding: 40px 0;
     box-shadow: 0 0px 10px rgba(255, 255, 255, 0.2);
-}
+} */
 
 .rules-book {
-    margin: auto;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 50%;
     gap: 14px;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.rules-img {
+/* .rules-img {
     width: 100%;
-}
+} */
 
-.rules-img img {
+/* .rules-img img {
     border-radius: 7px;
     height: 100%;
     width: 100%;
-}
+} */
 
 .rules-header h2 {
     margin: auto;
-    width: 70%;
+    width: 80%;
     text-align: center;
     font-weight: 700;
     font-family: Montserrat, helvetica, arial, sans-serif;
@@ -249,9 +270,9 @@
 .rules-book {
     position: relative;
     padding: 30px;
-    border-radius: 15px;
+    /* border-radius: 15px; */
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
-    max-width: 600px;
+    max-width: 50%;
     color: #fff;
 }
 
@@ -275,7 +296,16 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 540px) {
+    .rules-book {
+        /* margin: auto; */
+        display: inline;
+        /* width: 100%; */
+        padding: 15px;
+
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    }
+
     .rules-header h2 {
         font-size: 1.3rem;
     }
@@ -286,10 +316,5 @@
 
     .rules h3 {
         font-size: 0.9rem;
-    }
-
-    .rules-book {
-        width: 90%;
-        padding: 15px;
     }
 }
