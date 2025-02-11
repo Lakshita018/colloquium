@@ -572,62 +572,80 @@
     border-bottom: 3px solid #B20710;
     width: 75%;
  }
-.sponsers{
-    font-size: clamp(2.5rem,6vw,4rem);
-    margin-bottom : 20px;
-    
+ .sponsers {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin-bottom: 20px;
 }
- .sponsors-grid {
+
+.sponsors-grid {
     z-index: 2;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(1, 1fr); /* Default: 1 card per row on small screens */
     gap: 10px;
     text-align: center;
 }
+
 .sponsor {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
 }
+
 .sponsor-logo {
     width: 270px;
     height: 270px;
 }
+
 .description {
-    margin-bottom: 10px;
-    font-size: 14px;
+    margin-top: 10px;
+    font-size: 18px; /* Increased from 14px to 18px */
+    font-weight: bold; /* Makes it stand out */
     color: #fcf8f8;
 }
 
- @media (max-width: 1200px) {
+/* Adjust grid layout for tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    .sponsors-grid {
+        grid-template-columns: repeat(2, 1fr); /* Show 2 cards per row */
+        gap: 20px;
+    }
+}
 
-     .sponsors-grid {
-         gap: 10px;
-     }
- }
+/* Adjust grid layout for larger screens */
+@media (min-width: 769px) {
+    .sponsors-grid {
+        grid-template-columns: repeat(3, 1fr); /* Show 3 cards per row */
+    }
+}
 
- @media (max-width: 768px) {
-     .sponsors-grid {
-         grid-template-columns: repeat(2, 1fr);
-         gap: 20px;
-     }
+@media (max-width: 1200px) {
+    .sponsors-grid {
+        gap: 10px;
+    }
+}
 
-     .title {
-         
-         margin-bottom: 2rem;
-     }
- }
+/* Further spacing adjustments for different screen sizes */
+@media (max-width: 768px) {
+    .title {
+        margin-bottom: 2rem;
+    }
+}
 
- @media (max-width: 480px) {
-     .sponsors-grid {
-         grid-template-columns: 1fr;
-     }
+@media (max-width: 480px) {
+    .sponsors-grid {
+        grid-template-columns: 1fr; /* Only 1 card visible per row */
+    }
 
-     .title {
-         margin-bottom: 1rem;
-     }
- }
+    .title {
+        margin-bottom: 1rem;
+    }
+
+    .description {
+        font-size: 16px; /* Slightly reduced for small screens for better readability */
+    }
+}
+
 
 .card-inner img {
     height: 100%;
