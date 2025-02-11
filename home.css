@@ -226,6 +226,7 @@
      background: rgba(0, 0, 0, 0.7);
      color: white;
      overflow: hidden;
+     margin:10px 0;
      box-shadow: 0 0 15px red;
  }
 
@@ -302,7 +303,7 @@
          bottom: 0;
      width: 100%;
      text-align: center;
-    background-color: rgba(229, 9, 20, 0.182);
+    background-color: rgb(71, 7, 10);
      padding: 1px;
      font-size: 1.5rem;
      font-weight: bold;
@@ -310,7 +311,7 @@
  }
 
  .card .card-back {
-     background: #e82929;
+     background: #4c0707;
      display: flex;
      justify-content: center;
      align-items: center;
